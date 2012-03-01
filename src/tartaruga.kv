@@ -1,0 +1,68 @@
+#: kivy 1.0.9
+
+<LancaTartaruga>:
+    size: 50, 70
+    canvas:        
+        Rectangle:
+            source: "./icon/Tartaruga2.png"
+            pos: self.pos
+            size: self.size
+
+<MoveUrubu>:
+    size: 250, 100
+    canvas:
+        Rectangle:
+            source: "./icon/UrubuRei.png"
+            pos: self.pos
+            size: self.size
+<MoveCesto>:
+    size: 100, 100
+    canvas:
+        Rectangle:
+            source: "./icon/cesto2.png"
+            pos: self.pos
+            size: self.size
+
+<Button>    
+
+            
+<TartarugaGame>:
+    tartaruga: lanca_tartaruga
+    urubu: move_urubu
+    cesto: move_cesto
+    btn1: button
+    
+    canvas:
+        Color:
+            rgb: 1,1,1
+        Rectangle:
+            source: "./icon/background.png"
+            pos: self.pos
+            size: self.size
+
+    Label:
+        font_size: 70
+        center_x: root.width - 50
+        top: root.top - 10
+        text: str(root.cesto.pontos)
+    Button:
+        id: button     
+        top: root.top - 10
+        background_normal: str(root.imageBotao)
+        background_down: "./icon/sonButton2.png"
+
+        
+    LancaTartaruga:
+        id: lanca_tartaruga
+        center: root.width / 2 , root.top - 170
+        
+    MoveUrubu:
+        id: move_urubu
+        center: root.width / 2, root.top - 100
+        
+    MoveCesto:
+        id: move_cesto
+        center: root.width / 2, 50
+    
+
+        

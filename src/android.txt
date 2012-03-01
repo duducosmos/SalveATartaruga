@@ -1,0 +1,3 @@
+title=<Festa no Céu>
+author=<Eduardo dos Santos Pereira>
+orientation=<portrait|landscape>
